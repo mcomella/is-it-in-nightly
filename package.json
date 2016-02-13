@@ -1,0 +1,24 @@
+{
+  "name": "is-it-in-nightly",
+  "version": "0.0.1",
+  "description": "Pass in a changeset and find out if it's in the latest Firefox Nightly build",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jsdom": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcomella/is-it-in-nightly.git"
+  },
+  "author": "Michael Comella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcomella/is-it-in-nightly/issues"
+  },
+  "homepage": "https://github.com/mcomella/is-it-in-nightly#readme"
+}
