@@ -5,6 +5,11 @@ var	app = express();
 app.get('/', (req, res) => {
     // TODO: It's slow if the answer is false.
     mozhg.isRevisionSetValid('20d90d9a12ce', 'd719ac4bcbec', (err, valid) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+
         res.send('hello world ' + valid);
     });
 });
