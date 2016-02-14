@@ -13,6 +13,11 @@
                 var requestPath = 'changeset/' + changesetId;
 
                 var req = new XMLHttpRequest();
+                req.onload = (e) => {
+                    var parsed = JSON.parse(req.response);
+                    var result = parsed.inNightly ? 'Yes!' : 'No';
+                    document.getElementById('result').innerHTML = result;
+                };
                 req.open('GET', requestPath);
                 req.send();
             });
@@ -28,6 +33,8 @@
         Changeset: <input type="text" name="changeset_id"/>
         <input type="submit" value="Find out"/>
     </form>
+
+    <h2 id='result'></h2>
 
 </body>
 </html>
