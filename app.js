@@ -3,16 +3,25 @@ var express = require('express'),
 var	app = express();
 
 app.get('/changeset/:changesetId', (req, res) => {
-    var changesetToVerify = req.params.changesetId;
+    // TODO: validate changesetid.
+    var changesetToVerifyId = req.params.changesetId;
 
-    // TODO: It's slow if the answer is false.
-    mozhg.isRevisionSetValid('20d90d9a12ce', 'd719ac4bcbec', (err, valid) => {
+    mozhg.getLatestNightlyChangesetId((err, latestNightlyChangesetId) => {
         if (err) {
             console.error(err);
             return;
         }
 
-        res.send('hello world ' + valid);
+        // TODO: It's slow if the answer is false.
+        mozhg.isRevisionSetValid(changesetToVerifyId, latestNightlyChangesetId, (err, valid) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+
+            console.log('Valid? ' + valid);
+            res.send('hello world ' + valid);
+        });
     });
 });
 
