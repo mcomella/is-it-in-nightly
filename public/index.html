@@ -8,6 +8,8 @@
             var form = document.forms['changeset_form'];
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
+                document.getElementById('result').innerHTML = '';
+
                 var formData = new FormData(form);
                 var changesetId = formData.get('changeset_id');
                 var requestPath = 'changeset/' + changesetId;
