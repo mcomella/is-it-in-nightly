@@ -2,7 +2,9 @@ var express = require('express'),
     mozhg = require('./lib/mozhg');
 var	app = express();
 
-app.get('/', (req, res) => {
+app.get('/changeset/:changesetId', (req, res) => {
+    var changesetToVerify = req.params.changesetId;
+
     // TODO: It's slow if the answer is false.
     mozhg.isRevisionSetValid('20d90d9a12ce', 'd719ac4bcbec', (err, valid) => {
         if (err) {

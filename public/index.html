@@ -2,10 +2,32 @@
 <html>
 <head>
     <title>Is it on Nightly?</title>
+
+    <script>
+        window.onload = () => {
+            var form = document.forms['changeset_form'];
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                var formData = new FormData(form);
+                var changesetId = formData.get('changeset_id');
+                var requestPath = 'changeset/' + changesetId;
+
+                var req = new XMLHttpRequest();
+                req.open('GET', requestPath);
+                req.send();
+            });
+        };
+    </script>
 </head>
 <body>
 
-<p>Testing body content.</p>
+    <h1>Is it on Nightly?</h1>
+    <p>Pass in a changeset id to find out if it's in the latest nightly build.</p>
+
+    <form id="changeset_form" >
+        Changeset: <input type="text" name="changeset_id"/>
+        <input type="submit" value="Find out"/>
+    </form>
 
 </body>
 </html>
