@@ -20,7 +20,7 @@ app.get('/changeset/:changesetId', (req, res) => {
             }
 
             console.log('%s is in Nightly: %s', changesetToVerifyId, valid);
-            res.send({inNightly: valid});
+            res.send({isOnNightly: valid});
         });
     });
 });

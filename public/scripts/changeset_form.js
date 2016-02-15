@@ -8,7 +8,7 @@ var ChangesetBox = React.createClass({
             // TODO: error handling.
             var parsed = JSON.parse(req.response);
             console.log('Received response: ' + JSON.stringify(parsed));
-            var result = parsed.inNightly ? 'Yes!' : 'No';
+            var result = parsed.isOnNightly ? 'Yes!' : 'No';
             this.setState({isOnNightly: result});
         }.bind(this);
         req.open('GET', reqPath);
