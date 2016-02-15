@@ -3,40 +3,17 @@
 <head>
     <title>Is it on Nightly?</title>
 
-    <script>
-        window.onload = () => {
-            var form = document.forms['changeset_form'];
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                document.getElementById('result').innerHTML = '';
-
-                var formData = new FormData(form);
-                var changesetId = formData.get('changeset_id');
-                var requestPath = 'changeset/' + changesetId;
-
-                var req = new XMLHttpRequest();
-                req.onload = (e) => {
-                    var parsed = JSON.parse(req.response);
-                    var result = parsed.inNightly ? 'Yes!' : 'No';
-                    document.getElementById('result').innerHTML = result;
-                };
-                req.open('GET', requestPath);
-                req.send();
-            });
-        };
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
 <body>
 
     <h1>Is it on Nightly?</h1>
     <p>Pass in a changeset id to find out if it's in the latest nightly build.</p>
 
-    <form id="changeset_form" >
-        Changeset: <input type="text" name="changeset_id"/>
-        <input type="submit" value="Find out"/>
-    </form>
-
-    <h2 id='result'></h2>
+    <div id="form_content"/>
+    <script type="text/babel" src="scripts/changeset_form.js"/>
 
 </body>
 </html>
