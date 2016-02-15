@@ -1,0 +1,3 @@
+#!/bin/bash
+
+supervisor -w lib,app.js $@ app.js
