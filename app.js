@@ -8,6 +8,7 @@ app.get('/changeset/:changesetId', (req, res) => {
 
     mozhg.getLatestNightlyChangesetId((err, latestNightlyChangesetId) => {
         if (err) {
+            // TODO: Pass errors to client.
             console.error(err);
             return;
         }
@@ -15,6 +16,7 @@ app.get('/changeset/:changesetId', (req, res) => {
         // TODO: It's slow if the answer is false.
         mozhg.isRevisionSetValid(changesetToVerifyId, latestNightlyChangesetId, (err, valid) => {
             if (err) {
+                // TODO: Pass errors to client.
                 console.error(err);
                 return;
             }
