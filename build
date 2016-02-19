@@ -1,0 +1,2 @@
+#!/bin/bash
+browserify app.js -o public/scripts/app.js
