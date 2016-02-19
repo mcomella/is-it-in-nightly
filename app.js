@@ -1,4 +1,7 @@
-var mozhg = require('./lib/mozhg');
+var ChangesetForm = require('./lib/ui/changesetform').ChangesetForm,
+    mozhg = require('./lib/mozhg'),
+    React = require('react'), // Used by reactify.
+    ReactDOM = require('react-dom');
 
 // TODO: Validate changeset.
 var changesetToVerifyId = '7ced13d644be';
@@ -21,3 +24,8 @@ mozhg.getLatestNightlyChangesetId((err, latestNightlyChangesetId) => {
         console.log('%s is in Nightly: %s', changesetToVerifyId, valid);
     });
 });
+
+ReactDOM.render(
+    <ChangesetForm url='changeset/' />,
+    document.getElementById('form_content')
+);
