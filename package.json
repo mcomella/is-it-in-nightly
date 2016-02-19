@@ -4,7 +4,6 @@
   "description": "Pass in a changeset and find out if it's in the latest Firefox Nightly build",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.13.4",
     "jsdom": "^8.0.2",
     "request": "^2.69.0"
   },
