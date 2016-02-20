@@ -50,15 +50,17 @@ var ChangesetForm = React.createClass({
 
     render: function () {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Changeset"
-                    value={this.state.changesetId}
-                    onChange={this.handleChangesetIdChange}/>
-                <input
-                    type="submit"
-                    value="Search"/>
+            <form onSubmit={this.handleSubmit} className="form-horizontal">
+                <div className="form-group">
+                    <input
+                        type="text"
+                        placeholder="Changeset"
+                        value={this.state.changesetId}
+                        onChange={this.handleChangesetIdChange}/>
+                    <button
+                        type="submit"
+                        className="btn btn-primary btn-sm">Submit</button>
+                </div>
             </form>
         );
     }

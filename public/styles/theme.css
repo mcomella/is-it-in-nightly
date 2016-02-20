@@ -1,0 +1,16 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.content > p > .btn {
+  margin: 5px 0;
+}
+
+.content .navbar .container {
+  width: auto;
+}
+
+.form-group > .btn {
+    margin: 0 auto 0 10px;
+}
