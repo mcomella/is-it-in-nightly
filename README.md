@@ -7,18 +7,12 @@ Install deps:
     npm install
 
 ## Run
-To run locally:
+To compile & run:
 
-    ./run_dev
+    ./build
+    cd dist && python -m SimpleHTTPServer
 
-By default, connect to `localhost:5000`.
-
-To run via heroku Procfile:
-
-    ./heroku local web
-
-## Config
-You can use the `PORT` environment variable to specify an alternative port.
+By default, connect to `localhost:8000`.
 
 ## Misc
 A previous version of this ran locally in a python script, accessing the user's
