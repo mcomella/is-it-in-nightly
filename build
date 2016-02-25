@@ -1,2 +1,2 @@
 #!/bin/bash
-browserify app.js -o public/scripts/app.js
+browserify -t [ babelify --presets [ react ] ] app.js -o public/scripts/app.js -v
