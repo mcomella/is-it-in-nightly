@@ -10,9 +10,16 @@ Install deps:
     npm install
 
 ## Run
-To compile & run:
+To compile:
 
     ./build
+
+Open the file locally in your browser. On OS X:
+
+    open dist/index.html
+
+Or host a local web server:
+
     cd dist && python -m SimpleHTTPServer
 
 By default, connect to `localhost:8000`.
