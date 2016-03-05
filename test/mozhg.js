@@ -47,6 +47,14 @@ describe('mozhg', function () {
       });
     });
 
+    it('should return false (quickly) when one revision set is invalid', function (done) {
+      var invalidRevision = 'aaa'; // unlikley to ever be a revision.
+      mozhg.isRevisionSetValid(invalidRevision, validStart, function (err, isValid) {
+        expect(isValid).to.be(false);
+        done(err);
+      });
+    });
+
     it('should return an error when the source is not available');
 
     it('should return an error when the source is not in the expected format');
