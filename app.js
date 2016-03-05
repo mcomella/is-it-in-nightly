@@ -7,20 +7,18 @@ var ChangesetForm = require('./lib/ui/changesetform').ChangesetForm,
 var isItOnNightly = function (changesetToVerifyId, callback) {
     mozhg.getLatestNightlyChangesetId((err, latestNightlyChangesetId) => {
         if (err) {
-            // TODO: Pass errors to client.
-            console.error(err);
+            callback(err, null, changesetToVerifyId);
             return;
         }
 
         // TODO: It's slow if the answer is false.
         mozhg.isRevisionSetValid(changesetToVerifyId, latestNightlyChangesetId, (err, valid) => {
             if (err) {
-                // TODO: Pass errors to client.
-                console.error(err);
+                callback(err, null, changesetToVerifyId);
                 return;
             }
             console.log('%s is in Nightly: %s', changesetToVerifyId, valid);
-            callback(valid, changesetToVerifyId);
+            callback(null, valid, changesetToVerifyId);
         });
     });
 }
