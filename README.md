@@ -17,6 +17,11 @@ To compile & run:
 
 By default, connect to `localhost:8000`.
 
+## Test
+Run:
+
+    npm test
+
 ## Misc
 A previous version of this ran locally in a python script, accessing the user's
 local pull of mozilla-central. You can find that in `local/`.
