@@ -1,6 +1,9 @@
 # Is it on Nightly?
 Find out if a given changeset is in the latest Nightly build.
 
+[![Build
+Status](https://travis-ci.org/mcomella/is-it-in-nightly.svg?branch=master)](https://travis-ci.org/mcomella/is-it-in-nightly)
+
 ## Setup
 Install deps:
 
