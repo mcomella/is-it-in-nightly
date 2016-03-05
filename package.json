@@ -23,7 +23,7 @@
     "url": "git+https://github.com/mcomella/is-it-in-nightly.git"
   },
   "author": "Michael Comella",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mcomella/is-it-in-nightly/issues"
   },
