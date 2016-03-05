@@ -11,6 +11,10 @@ body {
   width: auto;
 }
 
-.form-group > .btn {
+.form-group > .btn, .form-group > .spinner {
     margin: 0 auto 0 10px;
+}
+
+.spinner-group {
+    float: left; /* Get the spinner in the same row */
 }
