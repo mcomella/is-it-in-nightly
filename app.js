@@ -20,7 +20,7 @@ var isItOnNightly = function (changesetToVerifyId, callback) {
                 return;
             }
             console.log('%s is in Nightly: %s', changesetToVerifyId, valid);
-            callback(valid);
+            callback(valid, changesetToVerifyId);
         });
     });
 }
