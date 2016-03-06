@@ -1,0 +1,20 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.content > p > .btn {
+  margin: 5px 0;
+}
+
+.content .navbar .container {
+  width: auto;
+}
+
+.form-group > .btn, .form-group > .spinner {
+    margin: 0 auto 0 10px;
+}
+
+.spinner-group {
+    float: left; /* Get the spinner in the same row */
+}

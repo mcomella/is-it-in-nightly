@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Is it on Nightly?</title>
+
+    <link rel="stylesheet" href="styles/bootstrap-3.3.6.min.css">
+    <link rel="stylesheet" href="styles/boot_superhero.min.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/spinner.css">
+</head>
+<body role="document">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- TODO: Collapse button does not work -->
+                <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Is it on Nightly?</a>
+            </div>
+            <div aria-expanded="false" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/mcomella/is-it-in-nightly">Source</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content" role="main">
+        <div class="row">
+            <!-- TODO: class="row" adds a negative margin so the form &
+                 content are aligned but I'd rather do this right. -->
+            <p>Pass in a changeset id to find out if it's in the latest nightly build.</p>
+        </div>
+
+        <div id="form_content"/>
+        <script src="scripts/app.js"></script>
+    </div>
+
+</body>
+</html>
