@@ -5,6 +5,9 @@ Status](https://travis-ci.org/mcomella/is-it-in-nightly.svg?branch=master)](http
 Find out if a given changeset is in the latest Nightly build. Try it live at
 [http://mcomella.xyz/is-it-in-nightly](http://mcomella.xyz/is-it-in-nightly).
 
+For more info (including implementation details), check out [my blog
+post][blog].
+
 ## Setup
 Install deps:
 
@@ -29,3 +32,5 @@ By default, connect to `localhost:8000`.
 Run:
 
     npm test
+
+[blog]: http://mcomella.xyz/blog/2016/is-it-in-nightly-yet.html
