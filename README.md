@@ -16,7 +16,7 @@ Install deps:
 ## Run
 To compile:
 
-    ./build
+    npm run build
 
 Open the file locally in your browser. On OS X:
 
@@ -27,6 +27,11 @@ Or host a local web server:
     cd dist && python -m SimpleHTTPServer
 
 By default, connect to `localhost:8000`.
+
+### Development
+To build as files are edited:
+
+    npm run watch
 
 ## Test
 Run:

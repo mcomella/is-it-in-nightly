@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
     "cheerio": "^0.20.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
@@ -13,9 +14,12 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "watchify": "^3.7.0"
   },
   "scripts": {
+    "build": "mkdir -p dist/scripts && browserify -t [ babelify --presets [ react ] ] app.js -o dist/scripts/app.js -v",
+    "watch": "mkdir -p dist/scripts && watchify -t [ babelify --presets [ react ] ] app.js -o dist/scripts/app.js -v",
     "test": "mocha test"
   },
   "repository": {
