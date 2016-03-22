@@ -3,7 +3,7 @@
 # TODO: It'd be great if we can stash first but then I need to know how
 # to save the output of a command (i.e. we don't want to `stash pop` if
 # we didn't stash.
-echo "Building..." && ./build && \
+echo "Building..." && npm run build && \
     rm -rf publish && mkdir publish && \
     echo "Copying dist/* to publish/..." && cp -r dist/* publish && \
     echo "Checkout docs branch..." && git checkout gh-pages && \
