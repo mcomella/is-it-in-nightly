@@ -18,6 +18,8 @@
     "watchify": "^3.7.0"
   },
   "scripts": {
+    "build": "mkdir -p dist/scripts && browserify -t [ babelify --presets [ react ] ] app.js -o dist/scripts/app.js -v",
+    "watch": "mkdir -p dist/scripts && watchify -t [ babelify --presets [ react ] ] app.js -o dist/scripts/app.js -v",
     "test": "mocha test"
   },
   "repository": {
