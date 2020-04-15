@@ -1,3 +1,7 @@
+**This project is no longer maintained.** See
+[Did It Land](https://gijsk.github.io/diditland/) for an actively maintained
+replacement.
+
 [![Build
 Status](https://travis-ci.org/mcomella/is-it-in-nightly.svg?branch=master)](https://travis-ci.org/mcomella/is-it-in-nightly)
 
